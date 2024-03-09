@@ -1,7 +1,6 @@
 package org.lsposed.lspatch.manager
 
 import android.os.Binder
-import android.os.Bundle
 import android.os.IBinder
 import android.os.ParcelFileDescriptor
 import android.util.Log
@@ -33,6 +32,14 @@ object ManagerService : ILSPApplicationService.Stub() {
     }
 
     override fun requestInjectedManagerBinder(binder: List<IBinder>?): ParcelFileDescriptor? {
+        return null
+    }
+
+    override fun requestCLIBinder(sPid: String?, binder: List<IBinder?>?): Int {
+        return -1
+    }
+
+    override fun requestModuleBinder(name: String?): IBinder? {
         return null
     }
 }

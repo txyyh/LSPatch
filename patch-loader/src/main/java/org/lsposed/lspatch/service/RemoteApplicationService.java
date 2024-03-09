@@ -107,4 +107,13 @@ public class RemoteApplicationService implements ILSPApplicationService {
     public ParcelFileDescriptor requestInjectedManagerBinder(List<IBinder> binder) {
         return null;
     }
+
+    @Override
+    public int requestCLIBinder(String sPid, List<IBinder> binder) {
+        return -1;
+    }
+    @Override
+    public IBinder requestModuleBinder(String name) {
+        return null;
+    }
 }
